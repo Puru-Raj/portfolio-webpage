@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Puru Raj💤</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <style>
+            html{
+                scroll-behavior: smooth;
+                
+            }
+            *{
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+            #loading{
+                position:fixed;
+                z-index: 100;
+                width: 100%;
+                height: 100vh;
+                background-color: white;
+                background-image: url(Load.gif);
+                background-repeat: no-repeat;
+                background-position: center;
+                text-transform: capitalize;
+            }
+            #loading p{
+                text-align: center;
+                font-size: 45px;
+                font-weight: lighter;
+                transform: translateY(80vh);
+            }
+            body{
+                background-color: rgb(247, 240, 240);
+                background-position: center;
+                background-size: cover;
+                height: 100%;
+            }
+            nav{
+                overflow: hidden;
+                position: fixed;
+                top: 0px;
+                z-index: 1;
+                width: 100%;height: 75px;
+                background: black;
+                color: white;display: flex;justify-content: space-between;
+                align-items: center;text-transform: uppercase;
+                border-radius:0px 0px 7px 7px ;
+                box-shadow:0 7px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: all 0.5s;
+            }
+            nav .logo{
+                width: 25%;
+                z-index: 0;
+            }
+            nav .logo:hover{
+                color: rgb(255, 255, 255);
+                opacity: 0;
+            }
+            nav .menu{
+                text-decoration: none;
+                width: 40%;display: flex;justify-content: space-evenly;
+            }
+            nav .menu a{
+                text-decoration: none;
+                font-weight: bold ;
+                transition-duration: 400ms;
+                border-bottom: 1.5px solid black;           
+                }
+            nav .menu a:hover{
+                
+                border-bottom: 2px solid rgb(16, 16, 184);
+                padding-bottom: 1px;
+                transform: scale(.903);
+                opacity: 0.4;
+            }
+            .intro{
+                background-image: url(11.jpeg) ;
+                background-attachment: fixed;background-position: center;background-size: cover;
+                font-family: 'Oxanium';
+                color: rgb(255, 255, 255);
+                text-shadow: 1px 1px 5px rgb(0, 15, 46);
+                word-spacing: 25px;
+                letter-spacing: 5px;
+                width: 100%;
+                height: 900px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                display: flex;
+            }
+            #About{
+                margin:0px 75px;
+                padding: 90px 0px;
+            }
+            
+            @media (min-width: 900px){
+                #About .about{
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            #About .about .img{
+                flex:0.62;
+                padding: 80px 0px;
+            }
+            #About .about .text{
+                flex: 1;
+                padding: 80px 10px;
+                color: gray;
+                text-align: center;
+            }
+            #About .about .text #one{
+                font-size: 25px;
+                letter-spacing: 3px; word-spacing: 4px; padding: 15px;text-decoration: none;
+            }
+            #About .about .text #two{
+                padding-top: 20px;
+                font-size: 22px;
+                letter-spacing: 2px;word-spacing: 2px;
+            }
+
+
+
+            .container{
+                background-color: white;
+            }
+
+
+
+            #Skills{
+                background-color: white;
+                font-size: 22px;
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                padding-top: 19px;
+            }
+            .o{
+                width:385px;
+                height: 250px;
+                background-color:  rgb(247, 240, 240);
+                transition: ease 500ms;
+                align-items: center;
+                text-align: center;
+                padding-top: 10px;
+                border:20px solid white;
+            }
+            #Skills .o:hover{
+                transform: scale(0.965);
+            }
+
+
+            
+
+
+            
+            .contact{
+                background-color: rgb(0, 0, 0);
+                height: 250px;
+                color: cornsilk;   
+                align-items: center;  
+                margin-top: 50px;
+
+            }
+            .contact .elem{
+                
+                color: white;display: flex;
+                justify-content: space-around;
+                margin: 50px 50px;
+            }
+            .contact .elem a{
+                align-items: center;
+                transition-duration: 600ms;
+                opacity: 0.6;
+                transform: scale(0.8);
+            }
+            .contact .elem a:hover{
+                opacity: 1;
+                transform: scale(1.2) rotate(360deg);
+                
+            }
+            h1,h2{
+                text-align: center;
+                font-family: 'Poppins', sans-serif;
+            }
+            h3{
+                font-family: 'Poppins', sans-serif;
+            }
+            .typing{
+                margin-left: 25px;
+                position: relative;
+            }
+            .typing::after{
+                content: "";
+                position: absolute;
+                width: 1px;
+                right: -5px;
+                height: 90%;
+                border-right: 2px solid;
+                animation: blink 0.3s infinite ease;
+            }
+            @keyframes blink{
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+            footer{
+                background: blue;
+                height: 75px;
+                bottom: 0px;
+                color: white;
+                padding-top: 20px;
+                text-align: center;
+                font-family:cursive;
+                font-size: 23px;
+            }
+        </style>
+    </head>
+    <body onload="load()">  
+            <div id="loading">
+                <p>Loading</p>
+            </div>
+             <nav>
+                <div class="logo">
+                    <h2>Puru</h2>
+                </div>
+                <div class="menu">
+                    <a href="#">Home</a>
+                    <a href="#About">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+            <div class="intro">
+                
+                <h1 class="typing"></h1>
+                <script src="in.js"></script>
+            </div>
+            <div class="About" id="About">
+                <h1>About me</h1>
+                <div class="about">
+                    <div class="img">
+                        <img src="Puru.jpg" height="400px" width="auto">
+                    </div>
+                    <div class="text">
+                        <p id="one">Hey there ! My name is <span style="color: black">Puru Raj</span>;<br> I am currently pursuing <span style="color: black">Electrical Engineering</span>  at <span style="color: black"><a href="iitj.ac.in">IIT JODHPUR</a></span></p>
+                        <p id="two">In a nutshell, I tickle with my computer 👨‍💻 , play Cricket 🏏, Capture different things 📸, Sleep a lot 🥱 😴 , share Memes and will probably do something way cooler in future. </p>
+                    </div>
+                </div> 
+            </div>
+
+
+            <div class="container">
+                <h2>Skills</h2>
+                <div id="Skills">
+                    <div class="o">
+                        <img src="coding.png" height="120px"><br>
+                        In's and outs of Java,Javascript and Python
+                    </div>
+                    <div class="o">
+                        <img src="camera.png" height="120px"><br>
+                        Photography
+                    </div>
+                    <div class="o">                        <img src="content.png" height="120px"><br>
+                        Web design Using HTML,CSS and bootstrap
+                    </div>
+                    <div class="o">
+                        <img src="ux.png" height="120px"><br>
+                        UI/UX design using Adobe XD and somewhat React
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contact" id="contact">
+                <h1>Contact Info</h1>
+                <div class="elem">
+                    <a href="https://www.instagram.com/puru._raj/?hl=hi" target="_blank"><img src="insta.png" height="105px" width="auto"></a>
+                    <a href="https://www.facebook.com/puru.raj.7140" target="_blank"><img src="fb.png" height="85px" width="auto"></a>
+                    <a href="mailto:raj.16@iitj.ac.in?Subject=Hello" target="_top"><img src="mail.png" height="105px"></a>
+                    <a href="https://goo.gl/maps/8DnQUFzFFZFUvGwGA" target="_blank"><img src="loc.png" height="75px">IIT JODHPUR</a>
+                </div>
+            </div>
+
+
+
+
+    </body>
+    <footer>
+        <p>This site was made from Scratch by Puru</p>
+    </footer>
+</html>
